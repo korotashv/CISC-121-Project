@@ -1,4 +1,4 @@
-# CISC-121 Project – Playlist Vibe Builder
+# CISC-121 Project – Poppy-Playlist-Visualiser
 
 ## Chosen Problem
 This project solves the Playlist Vibe Builder problem by sorting songs based on either energy or duration. It helps a user organize a playlist depending on the mood or pacing they want.
