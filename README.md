@@ -49,10 +49,41 @@ Output → the app displays the sorted playlist and a step-by-step explanation o
 ## Flowchart
 ![App Screenshot](CISCFINAL.png)
 
-6. ## steps to run
+6. ## Steps to run
 
-7. ## hugging face link
+    1. Make sure Python is installed on your system
+    2. Install required dependencies:
+   pip install -r requirements.txt
+    3. Run the application:
+   python app.py
+    4. Open the local Gradio link shown in the terminal
+    5. Enter a playlist and start sorting
 
-8. ## testing
+    
+7. ## Hugging face link
 
-9. ## Author & Acknowledgment
+8. ## Testing
+
+The application was tested with a variety of inputs to ensure correctness and robustness.
+
+### Normal Cases
+- Sorting a playlist of multiple songs by energy (ascending and descending)
+- Sorting by duration, title, and artist
+
+### Edge Cases
+- Energy values at boundaries (0 and 100)
+- Very short and very long durations
+- Playlist with only one song
+
+### Error Handling
+- Missing fields in input
+- Incorrect formatting (not using | separators)
+- Non-numeric energy or duration values
+
+### Results
+- All valid inputs were sorted correctly
+- Invalid inputs displayed clear error messages
+- The app did not crash under any tested conditions
+
+10. ## Author & Acknowledgment
+ I, Victor korotash made this hugging face link with the help of ChatGPT. I did a lot of brainstorming by hand, then resorted to chatgpt to explain the things i was not able to solve on my own. Moving through this assignment I did not blatantly rely on ai, and always reviewed what it suggested for me to add or improve before commiting the changes.
