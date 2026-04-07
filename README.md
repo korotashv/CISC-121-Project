@@ -24,7 +24,7 @@ This helps the user understand what the algorithm is doing instead of only seein
 ## Demo
 Click the image below to watch the demo:
 
-[![Watch Demo](CISCFINAL.png)](cisc-example-video.mov)
+[![Watch Demo](cisc-example-video.mov)
 
 ## Problem Breakdown & Computational Thinking
 ### Decomposition
