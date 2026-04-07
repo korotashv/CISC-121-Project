@@ -1,12 +1,12 @@
-1.# CISC-121 Project – Poppy-Playlist-Visualiser
+1. # CISC-121 Project – Poppy-Playlist-Visualiser
 
-2.## Chosen Problem
+2. ## Chosen Problem
 This project solves the Playlist Vibe Builder problem by sorting songs based on either energy or duration. It helps a user organize a playlist depending on the mood or pacing they want.
 
-3.## Chosen Algorithm
+3. ## Chosen Algorithm
 I chose Merge Sort for this project. It is a good fit because it is efficient, works well on lists of records, and its divide-and-merge process is easy to visualize step by step for a user learning how sorting works. The playlist data contains multiple songs, and each song has several components such as titles, artists, energy, and duration. Merge Sort works well because it can sort these song records using a selected key while keeping the structure of each song together. It also makes the sorting process clear because the list is repeatedly split into smaller parts and then merged back in sorted order.
 
-4.## Preconditions and Assumptions
+## Preconditions and Assumptions
 - Each song must have a title, artist, energy value, and duration.
 - Energy must be a whole number from 0 to 100.
 - Duration must be a positive whole number.
@@ -21,12 +21,12 @@ The user sees:
 - the merge sort steps, including splitting, comparisons, selections, and merged sections
 This helps the user understand what the algorithm is doing instead of only seeing the final result.
 
-## Demo
+4. ## Demo
 Click the image below to watch the demo:
 
 [![Watch Demo](cisc-example-video.mov)
 
-## Problem Breakdown & Computational Thinking
+5. ## Problem Breakdown & Computational Thinking
 ### Decomposition
 - Read and validate the playlist input
 - Convert each line into a song record
@@ -48,3 +48,11 @@ Output → the app displays the sorted playlist and a step-by-step explanation o
 
 ## Flowchart
 ![App Screenshot](CISCFINAL.png)
+
+6. ## steps to run
+
+7. ## hugging face link
+
+8. ## testing
+
+9. ## Author & Acknowledgment
