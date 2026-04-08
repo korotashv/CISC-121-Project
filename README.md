@@ -65,7 +65,7 @@ Output → the app displays the sorted playlist and a step-by-step explanation o
 8. ## Testing
 (I would like to preface that i got confused and through my iterations of code i commited the changes on the hugging face website and not github. I've included a screenshot)
 
-![App Screenshot](commit photos.png)
+![App Screenshot](cphotos.png)
 
 The application was tested with a variety of inputs to ensure correctness and robustness.
 
