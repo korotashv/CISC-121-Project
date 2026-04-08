@@ -12,7 +12,7 @@ I chose Merge Sort for this project. It is a good fit because it is efficient, w
 - Duration must be a positive whole number.
 - The app checks for invalid input and shows an error message if the format is incorrect.
 - Multiple artists are allowed; they will follow alphabetical order of the first listed artist.
--A quiz feature was added to test the user’s understanding of the selected sorting rules. (eg if its ascending what the proper order should be. this can help them ensure my algorithm works properly.)
+- A quiz feature was added to test the user’s understanding of the selected sorting rule. For example, if the order is ascending, the quiz helps the user check what the correct order should be.
   
 ## What the User Sees During the Simulation
 The user sees:
@@ -34,7 +34,7 @@ This helps the user understand what the algorithm is doing instead of only seein
 - Compare songs using the selected sorting key
 - Merge the smaller sorted lists back together
 - Display the sorted playlist and all sorting steps
-- 
+  
 ### Pattern Recognition
 The same comparison process repeats throughout the algorithm. Merge Sort keeps splitting the list, then repeatedly compares the front elements of two smaller sorted lists until the full list is rebuilt in order.
 
@@ -44,7 +44,7 @@ The app shows the most important parts of the sorting process, such as splitting
 ### Algorithm Design
 Input → user enters playlist data and chooses a sorting key
 Process → the program validates the data, runs Merge Sort, and records each step
-Output → the app displays the sorted playlist and a step-by-step explanation of the sorting process. quiz is also provided.
+Output → the app displays the sorted playlist and a step-by-step explanation of the sorting process. A quiz is also provided.
 
 ## Flowchart
 ![App Screenshot](CISCFINAL.png)
@@ -57,10 +57,12 @@ Output → the app displays the sorted playlist and a step-by-step explanation o
    python app.py
  4. Open the local Gradio link shown in the terminal.
  5. Enter a playlist and start sorting.
- 6. 
-## Hugging Face link
-       Click here https://huggingface.co/spaces/07vkk/Poppy-Playlist-Visualiser
-        the Github repo has the same app.py as the hugging face link.
+
+## Hugging Face Link
+[Open the live app](https://huggingface.co/spaces/07vkk/Poppy-Playlist-Visualiser)
+
+The GitHub repository contains the same final `app.py` used in the deployed Hugging Face app.
+
 ## Testing
 ![App Screenshot](cphotos.png)
 
@@ -149,4 +151,4 @@ All tested cases passed. Valid playlists were sorted correctly using the custom 
 
 
 ## Author & Acknowledgment
- I, Victor Korotash created this hugging face app with the help of ChatGPT. I used ChatGPT as a support tool for brainstorming, debugging, and improving explanations when I got stuck. All final decisions, testing, and submitted content were reviewed by me before inclusion in the project. Some of the ideas I had on my own, and some were suggested by the AI. For example, I wanted there to be a song bank, and ChatGPT helped implement a randomizer so the same songs do not repeat.
+I, Victor Korotash, created this Hugging Face app with the help of ChatGPT. I used ChatGPT as a support tool for brainstorming, debugging, and improving explanations when I got stuck. All final decisions, testing, and submitted content were reviewed by me before inclusion in the project. Some of the ideas I had on my own, and some were suggested by the AI. For example, I wanted there to be a song bank, and ChatGPT helped implement a randomizer so the same songs do not repeat.
