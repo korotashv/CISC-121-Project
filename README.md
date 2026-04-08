@@ -114,16 +114,16 @@ Invalid input was tested to confirm that the app displayed helpful messages and 
 
 | Test Case | Example Input / Action | Expected Result | Actual Result | Outcome |
 |---|---|---|---|---|
-| Missing title | `| The Weeknd | 90 | 200` | Error message for missing title | Correct error shown | Pass |
-| Missing artist | `Blinding Lights | | 90 | 200` | Error message for missing artist | Correct error shown | Pass |
+| Missing title | `\| The Weeknd \| 90 \| 200` | Error message for missing title | Correct error shown | Pass |
+| Missing artist | `Blinding Lights \| \| 90 \| 200` | Error message for missing artist | Correct error shown | Pass |
 | Missing separators | `Blinding Lights The Weeknd 90 200` | Format error shown | Correct error shown | Pass |
-| Too few fields | `Blinding Lights | The Weeknd | 90` | Format error shown | Correct error shown | Pass |
-| Non-numeric energy | `Blinding Lights | The Weeknd | high | 200` | Error message for invalid energy | Correct error shown | Pass |
-| Non-numeric duration | `Blinding Lights | The Weeknd | 90 | long` | Error message for invalid duration | Correct error shown | Pass |
-| Energy below range | `Blinding Lights | The Weeknd | -5 | 200` | Error message for out-of-range energy | Correct error shown | Pass |
-| Energy above range | `Blinding Lights | The Weeknd | 120 | 200` | Error message for out-of-range energy | Correct error shown | Pass |
-| Zero duration | `Blinding Lights | The Weeknd | 90 | 0` | Error message for invalid duration | Correct error shown | Pass |
-| Negative duration | `Blinding Lights | The Weeknd | 90 | -10` | Error message for invalid duration | Correct error shown | Pass |
+| Too few fields | `Blinding Lights \| The Weeknd \| 90` | Format error shown | Correct error shown | Pass |
+| Non-numeric energy | `Blinding Lights \| The Weeknd \| high \| 200` | Error message for invalid energy | Correct error shown | Pass |
+| Non-numeric duration | `Blinding Lights \| The Weeknd \| 90 \| long` | Error message for invalid duration | Correct error shown | Pass |
+| Energy below range | `Blinding Lights \| The Weeknd \| -5 \| 200` | Error message for out-of-range energy | Correct error shown | Pass |
+| Energy above range | `Blinding Lights \| The Weeknd \| 120 \| 200` | Error message for out-of-range energy | Correct error shown | Pass |
+| Zero duration | `Blinding Lights \| The Weeknd \| 90 \| 0` | Error message for invalid duration | Correct error shown | Pass |
+| Negative duration | `Blinding Lights \| The Weeknd \| 90 \| -10` | Error message for invalid duration | Correct error shown | Pass |
 
 ### User Interface Tests
 The Gradio interface was tested to ensure that the app was interactive and easy to use.
@@ -155,4 +155,4 @@ All tested cases passed. Valid playlists were sorted correctly using the custom 
 Screenshots of successful runs, error handling, and interface features are included in this repository as additional evidence of testing and verification.
 
 10. ## Author & Acknowledgment
- I, Victor korotash made this hugging face link with the help of ChatGPT. I did a lot of brainstorming by hand, then resorted to chatgpt to explain the things i was not able to solve on my own. Moving through this assignment I did not blatantly rely on ai, and always reviewed what it suggested for me to add or improve before commiting the changes.
+ I, Victor korotash made this hugging face app with the help of ChatGPT. I did a lot of brainstorming by hand, then resorted to chatgpt to explain the things i was not able to solve on my own. Moving through this assignment I did not blatantly rely on ai, and always reviewed what it suggested for me to add or improve before commiting the changes. Some of the ideas I had on my own, and some the ai suggested to improve my chance of a high grade. for example i wanted there to be a song bank, and chat gpt helped implement a randomizer so the same songs dont come again and again.
