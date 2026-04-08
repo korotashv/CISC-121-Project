@@ -69,27 +69,90 @@ Output → the app displays the sorted playlist and a step-by-step explanation o
 
 ![App Screenshot](cphotos.png)
 
-The application was tested with a variety of inputs to ensure correctness and robustness.
+## Testing
 
-### Normal Cases
-- Sorting a playlist of multiple songs by energy (ascending and descending)
-- Sorting by duration, title, and artist
+The application was tested using normal cases, edge cases, invalid inputs, and user interface actions to verify correctness, robustness, and usability. Testing was completed on the final working version of the app, and all tests passed successfully. this chart was generated with ai to look cleaner in the readme on github. all of this was tested before being added.
 
-### Edge Cases
-- Energy values at boundaries (0 and 100)
-- Very short and very long durations
-- Playlist with only one song
+### Testing Goals
+The testing process was designed to confirm that:
+- the custom Merge Sort algorithm produced correct results
+- the application handled both ascending and descending order correctly
+- all supported sorting keys worked properly
+- invalid input was detected and reported clearly
+- the interface features behaved as expected
+- the app remained stable without crashing
 
-### Error Handling
-- Missing fields in input
-- Incorrect formatting (not using | separators)
-- Non-numeric energy or duration values
+### Normal Sorting Tests
+The following standard sorting scenarios were tested:
 
-### Results
-- All valid inputs were sorted correctly
-- Invalid inputs displayed clear error messages
-- The app did not crash under any tested conditions
-- even with a wrong input, the playlist still sorted values that were valid.
+| Test Case | Input / Action | Expected Result | Actual Result | Outcome |
+|---|---|---|---|---|
+| Sort by energy ascending | Valid playlist with multiple songs | Songs sorted from lowest to highest energy | Correctly sorted | Pass |
+| Sort by energy descending | Valid playlist with multiple songs | Songs sorted from highest to lowest energy | Correctly sorted | Pass |
+| Sort by duration ascending | Valid playlist with multiple songs | Songs sorted from shortest to longest duration | Correctly sorted | Pass |
+| Sort by duration descending | Valid playlist with multiple songs | Songs sorted from longest to shortest duration | Correctly sorted | Pass |
+| Sort by title ascending | Valid playlist with multiple songs | Songs sorted alphabetically by title | Correctly sorted | Pass |
+| Sort by title descending | Valid playlist with multiple songs | Songs sorted in reverse alphabetical order by title | Correctly sorted | Pass |
+| Sort by artist ascending | Valid playlist with multiple songs | Songs sorted alphabetically by artist | Correctly sorted | Pass |
+| Sort by artist descending | Valid playlist with multiple songs | Songs sorted in reverse alphabetical order by artist | Correctly sorted | Pass |
+
+### Edge Case Tests
+The application was also tested with special cases to make sure it behaved correctly under less common conditions.
+
+| Test Case | Input / Action | Expected Result | Actual Result | Outcome |
+|---|---|---|---|---|
+| Single-song playlist | One valid song only | Playlist remains unchanged and app still runs correctly | Returned unchanged | Pass |
+| Two-song playlist | Two valid songs | Songs sorted correctly and quiz still functions | Correctly sorted | Pass |
+| Equal energy values | Multiple songs sharing the same energy value | Songs still sorted consistently | Worked correctly | Pass |
+| Boundary energy values | Songs with energy values 0 and 100 | Boundary values handled correctly | Correctly sorted | Pass |
+| Very short and very long durations | Songs with duration values such as 1 and 999 | Duration sorting still correct | Correctly sorted | Pass |
+| Mixed capitalization | Titles/artists using upper and lower case letters | Sorting remains case-insensitive for text fields | Worked correctly | Pass |
+| Blank lines between songs | Valid songs with empty lines in input | Blank lines ignored and valid songs still processed | Worked correctly | Pass |
+
+### Input Validation and Error Handling Tests
+Invalid input was tested to confirm that the app displayed helpful messages and did not crash.
+
+| Test Case | Example Input / Action | Expected Result | Actual Result | Outcome |
+|---|---|---|---|---|
+| Missing title | `| The Weeknd | 90 | 200` | Error message for missing title | Correct error shown | Pass |
+| Missing artist | `Blinding Lights | | 90 | 200` | Error message for missing artist | Correct error shown | Pass |
+| Missing separators | `Blinding Lights The Weeknd 90 200` | Format error shown | Correct error shown | Pass |
+| Too few fields | `Blinding Lights | The Weeknd | 90` | Format error shown | Correct error shown | Pass |
+| Non-numeric energy | `Blinding Lights | The Weeknd | high | 200` | Error message for invalid energy | Correct error shown | Pass |
+| Non-numeric duration | `Blinding Lights | The Weeknd | 90 | long` | Error message for invalid duration | Correct error shown | Pass |
+| Energy below range | `Blinding Lights | The Weeknd | -5 | 200` | Error message for out-of-range energy | Correct error shown | Pass |
+| Energy above range | `Blinding Lights | The Weeknd | 120 | 200` | Error message for out-of-range energy | Correct error shown | Pass |
+| Zero duration | `Blinding Lights | The Weeknd | 90 | 0` | Error message for invalid duration | Correct error shown | Pass |
+| Negative duration | `Blinding Lights | The Weeknd | 90 | -10` | Error message for invalid duration | Correct error shown | Pass |
+
+### User Interface Tests
+The Gradio interface was tested to ensure that the app was interactive and easy to use.
+
+| Test Case | Action | Expected Result | Actual Result | Outcome |
+|---|---|---|---|---|
+| Random Example button | Click button | A valid sample playlist appears in the input box | Worked correctly | Pass |
+| Start Live Sort button | Click button with valid input | Sorting simulation begins and outputs update | Worked correctly | Pass |
+| Guided Example button | Click button | Guided explanation appears step by step | Worked correctly | Pass |
+| Reset button | Click button | All visible outputs are cleared | Worked correctly | Pass |
+| Speed slider | Adjust slider during sorting | Sorting animation speed changes | Worked correctly | Pass |
+| Sorting Steps accordion | Open accordion | Step-by-step Merge Sort log is visible | Worked correctly | Pass |
+| Input Errors accordion | Open accordion after invalid input | Error messages are visible | Worked correctly | Pass |
+| Interface clarity | Review labels/instructions | Labels are understandable and beginner-friendly | Worked correctly | Pass |
+
+### Quiz Feature Tests
+The quiz feature was tested to make sure it supported learning and responded correctly.
+
+| Test Case | Action | Expected Result | Actual Result | Outcome |
+|---|---|---|---|---|
+| Quiz generation | Start sorting with at least two songs | Quiz question appears | Worked correctly | Pass |
+| Yes button | Click when correct answer is Yes | Correct feedback shown | Worked correctly | Pass |
+| No button | Click when correct answer is No | Correct feedback shown | Worked correctly | Pass |
+| Not enough songs for quiz | Start with fewer than two songs | Quiz reports insufficient data | Worked correctly | Pass |
+
+### Summary of Results
+All tested cases passed. Valid playlists were sorted correctly using the custom Merge Sort implementation, including all supported sorting keys and both sorting orders. Edge cases were handled properly, invalid input produced clear error messages, and the GUI features behaved as expected. The app remained stable during testing and did not crash.
+
+Screenshots of successful runs, error handling, and interface features are included in this repository as additional evidence of testing and verification.
 
 10. ## Author & Acknowledgment
  I, Victor korotash made this hugging face link with the help of ChatGPT. I did a lot of brainstorming by hand, then resorted to chatgpt to explain the things i was not able to solve on my own. Moving through this assignment I did not blatantly rely on ai, and always reviewed what it suggested for me to add or improve before commiting the changes.
