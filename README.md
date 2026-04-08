@@ -1,9 +1,9 @@
-1. # CISC-121 Project – Poppy-Playlist-Visualiser
+# CISC-121 Project – Poppy-Playlist-Visualiser
 
-2. ## Chosen Problem
-This project solves the Playlist Vibe Builder problem by sorting songs based on either energy or duration. It helps a user organize a playlist depending on the mood or pacing they want.
+## Chosen Problem
+This project solves the Playlist Vibe Builder problem by sorting songs by energy, duration, title, or artist. It helps a user organize a playlist depending on the mood or pacing they want.
 
-3. ## Chosen Algorithm
+## Chosen Algorithm
 I chose Merge Sort for this project. It is a good fit because it is efficient, works well on lists of records, and its divide-and-merge process is easy to visualize step by step for a user learning how sorting works. The playlist data contains multiple songs, and each song has several components such as titles, artists, energy, and duration. Merge Sort works well because it can sort these song records using a selected key while keeping the structure of each song together. It also makes the sorting process clear because the list is repeatedly split into smaller parts and then merged back in sorted order.
 
 ## Preconditions and Assumptions
@@ -12,21 +12,21 @@ I chose Merge Sort for this project. It is a good fit because it is efficient, w
 - Duration must be a positive whole number.
 - The app checks for invalid input and shows an error message if the format is incorrect.
 - Multiple artists are allowed; they will follow alphabetical order of the first listed artist.
-- working quiz to test users understanding of what they are trying to order.
-
+-A quiz feature was added to test the user’s understanding of the selected sorting rules. (eg if its ascending what the proper order should be. this can help them ensure my algorithm works properly.)
+  
 ## What the User Sees During the Simulation
 The user sees:
-- the original playlist input
-- the final sorted playlist
-- the merge sort steps, including splitting, comparisons, selections, and merged sections
+- the original playlist input,
+- the final sorted playlist,
+- the Merge sort steps, including splitting, comparisons, selections, and merged sections
+- the step log highlights the splits, comparisons and placements so that the user can follow each stage of the algorithm.
 This helps the user understand what the algorithm is doing instead of only seeing the final result.
 
-4. ## Demo
-Click the image below to watch the demo:
+## Demo
+[Watch Demo Video](cisc-example-video.mov)
 
-[![Watch Demo](cisc-example-video.mov)]
+## Problem Breakdown & Computational Thinking
 
-5. ## Problem Breakdown & Computational Thinking
 ### Decomposition
 - Read and validate the playlist input
 - Convert each line into a song record
@@ -34,7 +34,7 @@ Click the image below to watch the demo:
 - Compare songs using the selected sorting key
 - Merge the smaller sorted lists back together
 - Display the sorted playlist and all sorting steps
-
+- 
 ### Pattern Recognition
 The same comparison process repeats throughout the algorithm. Merge Sort keeps splitting the list, then repeatedly compares the front elements of two smaller sorted lists until the full list is rebuilt in order.
 
@@ -49,29 +49,24 @@ Output → the app displays the sorted playlist and a step-by-step explanation o
 ## Flowchart
 ![App Screenshot](CISCFINAL.png)
 
-6. ## Steps to run
-
-    1. Make sure Python is installed on your system
-    2. Install required dependencies:
+## Steps to run locally
+ 1. Make sure Python is installed on your system.
+ 2. Install required dependencies:
    pip install -r requirements.txt
-    3. Run the application:
+ 3. Run the application:
    python app.py
-    4. Open the local Gradio link shown in the terminal
-    5. Enter a playlist and start sorting
-
-    
-7. ## Hugging face link
-       CLick here
-   https://huggingface.co/spaces/07vkk/Poppy-Playlist-Visualiser
-
-9. ## Testing
-(I would like to preface that i got confused and through my iterations of code i commited the changes on the hugging face website and not github. I've included a screenshot)
-
+ 4. Open the local Gradio link shown in the terminal.
+ 5. Enter a playlist and start sorting.
+ 6. 
+## Hugging Face link
+       Click here https://huggingface.co/spaces/07vkk/Poppy-Playlist-Visualiser
+        the Github repo has the same app.py as the hugging face link.
+## Testing
 ![App Screenshot](cphotos.png)
 
-## Testing
+The application was tested using normal cases, edge cases, invalid inputs, and user interface actions to verify correctness, robustness, and usability. Testing was completed on the final working version of the app, and all tests passed successfully.
 
-The application was tested using normal cases, edge cases, invalid inputs, and user interface actions to verify correctness, robustness, and usability. Testing was completed on the final working version of the app, and all tests passed successfully. this chart was generated with ai to look cleaner in the readme on github. all of this was tested before being added.
+This chart was generated with AI to make the README cleaner on GitHub, but all tests were completed before it was added.
 
 ### Testing Goals
 The testing process was designed to confirm that:
@@ -152,7 +147,6 @@ The quiz feature was tested to make sure it supported learning and responded cor
 ### Summary of Results
 All tested cases passed. Valid playlists were sorted correctly using the custom Merge Sort implementation, including all supported sorting keys and both sorting orders. Edge cases were handled properly, invalid input produced clear error messages, and the GUI features behaved as expected. The app remained stable during testing and did not crash.
 
-Screenshots of successful runs, error handling, and interface features are included in this repository as additional evidence of testing and verification.
 
-10. ## Author & Acknowledgment
- I, Victor korotash made this hugging face app with the help of ChatGPT. I did a lot of brainstorming by hand, then resorted to chatgpt to explain the things i was not able to solve on my own. Moving through this assignment I did not blatantly rely on ai, and always reviewed what it suggested for me to add or improve before commiting the changes. Some of the ideas I had on my own, and some the ai suggested to improve my chance of a high grade. for example i wanted there to be a song bank, and chat gpt helped implement a randomizer so the same songs dont come again and again.
+## Author & Acknowledgment
+ I, Victor Korotash created this hugging face app with the help of ChatGPT. I used ChatGPT as a support tool for brainstorming, debugging, and improving explanations when I got stuck. All final decisions, testing, and submitted content were reviewed by me before inclusion in the project. Some of the ideas I had on my own, and some were suggested by the AI. For example, I wanted there to be a song bank, and ChatGPT helped implement a randomizer so the same songs do not repeat.
