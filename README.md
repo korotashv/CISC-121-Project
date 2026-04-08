@@ -61,8 +61,10 @@ Output → the app displays the sorted playlist and a step-by-step explanation o
 
     
 7. ## Hugging face link
+       CLick here
+   https://huggingface.co/spaces/07vkk/Poppy-Playlist-Visualiser
 
-8. ## Testing
+9. ## Testing
 (I would like to preface that i got confused and through my iterations of code i commited the changes on the hugging face website and not github. I've included a screenshot)
 
 ![App Screenshot](cphotos.png)
@@ -87,6 +89,7 @@ The application was tested with a variety of inputs to ensure correctness and ro
 - All valid inputs were sorted correctly
 - Invalid inputs displayed clear error messages
 - The app did not crash under any tested conditions
+- even with a wrong input, the playlist still sorted values that were valid.
 
 10. ## Author & Acknowledgment
  I, Victor korotash made this hugging face link with the help of ChatGPT. I did a lot of brainstorming by hand, then resorted to chatgpt to explain the things i was not able to solve on my own. Moving through this assignment I did not blatantly rely on ai, and always reviewed what it suggested for me to add or improve before commiting the changes.
